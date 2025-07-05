@@ -1,0 +1,21 @@
+# Archivos de compilación
+bin/
+obj/
+*.user
+*.suo
+*.log
+
+# Archivos de VS
+.vs/
+*.dbmdl
+
+# Archivos de paquetes
+packages/
+
+# Archivos generados
+*.exe
+*.dll
+
+# Otros
+*.pdb
+*.cache

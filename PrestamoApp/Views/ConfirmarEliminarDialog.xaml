@@ -1,0 +1,40 @@
+﻿<Window x:Class="PrestamoApp.Views.ConfirmarEliminarDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Confirmar Eliminación"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize"
+        SizeToContent="WidthAndHeight"
+        WindowStyle="None"
+        Background="Transparent">
+
+    <Border Background="White" CornerRadius="8" BorderBrush="#dcdde1" BorderThickness="1" Padding="20">
+        <StackPanel>
+            <TextBlock Text="¿Está seguro que desea eliminar este cliente?"
+                       FontSize="16" 
+                       FontWeight="SemiBold"
+                       TextAlignment="Center"
+                       Margin="0,0,0,20"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="Eliminar"
+                        Width="100"
+                        Height="35"
+                        Background="#007bff"
+                        Foreground="White"
+                        Margin="5,0"
+                        BorderThickness="0"
+                        Click="Eliminar_Click"/>
+                <Button Content="Retornar"
+                        Width="100"
+                        Height="35"
+                        Background="#dc3545"
+                        Foreground="White"
+                        Margin="5,0"
+                        BorderThickness="0"
+                        Click="Retornar_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Border>
+</Window>
+
+

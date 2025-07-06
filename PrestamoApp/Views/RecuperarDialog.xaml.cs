@@ -56,7 +56,7 @@ namespace PrestamoApp.Views
 
                 await EnviarEmailRecuperacionAsync(correo, urlRecuperacion);
 
-                MessageBox.Show("Se ha enviado un correo con instrucciones para recuperar la contraseña.", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
+                
 
                 // Cierra el diálogo después de notificar
                 this.DialogResult = true;

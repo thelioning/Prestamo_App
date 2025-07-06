@@ -74,6 +74,9 @@
       if (resp.ok) {
         msgEl.style.color = '#27ae60';
         msgEl.innerText = 'Contraseña actualizada. Revise su correo.';
+        // Restaurar el botón a su estado original tras éxito
+        btn.disabled = false;
+        btn.innerText = 'Cambiar';
       } else {
         msgEl.style.color = '#c0392b';
         msgEl.innerText = data.error || 'Error al cambiar contraseña.';
@@ -91,3 +94,4 @@
   </script>
 </body>
 </html>
+

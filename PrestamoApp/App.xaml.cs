@@ -19,7 +19,7 @@ namespace PrestamoApp
             {
                 // Configura las opciones del DbContext (conexión a SQL Server)
                 var options = new DbContextOptionsBuilder<PrestamoDbContext>()
-                    .UseSqlServer(@"Server=DESKTOP-ELMACHO\SQLEXPRESS;Database=DBPrestamo;Trusted_Connection=True;Encrypt=False;")
+                    .UseSqlServer(@"Server=tcp:prestamoappsql.database.windows.net,1433;Initial Catalog=DBPrestamo;Persist Security Info=False;User ID=PrestamoApp;Password=Perlapaola1972;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;")
                     .Options;
 
                 DbContext = new PrestamoDbContext(options);

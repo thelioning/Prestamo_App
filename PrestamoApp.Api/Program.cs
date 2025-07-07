@@ -5,7 +5,7 @@ using PrestamoApp.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<PrestamoDbContext>(options =>
-    options.UseSqlServer("Server=.;Database=PrestamoDb;Trusted_Connection=True;"));
+    options.UseSqlServer("Server=tcp:prestamoappsql.database.windows.net,1433;Initial Catalog=DBPrestamo;Persist Security Info=False;User ID=PrestamoApp;Password=Perlapaola1972;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"));
 
 var app = builder.Build();
 

@@ -62,10 +62,10 @@
     btn.innerText = 'Procesando...';
 
     try {
-      const resp = await fetch('/.netlify/functions/cambiar', {
+      const resp = await fetch('https://prestamo-appapi.onrender.com/api/cambiar-clave', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ token, nuevaClave })
+        body: JSON.stringify({ Token: token, NuevaClave: nuevaClave })
       });
 
       const data = await resp.json();
@@ -73,9 +73,7 @@
 
       if (resp.ok) {
         msgEl.style.color = '#27ae60';
-        msgEl.innerText = 'Contraseña actualizada. Revise su correo.';
-        // Restaurar el botón a su estado original tras éxito
-        btn.disabled = false;
+        msgEl.innerText = 'Contraseña actualizada correctamente.';
         btn.innerText = 'Cambiar';
       } else {
         msgEl.style.color = '#c0392b';
@@ -94,4 +92,5 @@
   </script>
 </body>
 </html>
+
 

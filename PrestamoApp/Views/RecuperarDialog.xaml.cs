@@ -49,10 +49,10 @@ namespace PrestamoApp.Views
 
                 string token = GenerarTokenSeguro();
                 usuario.Token = token;
-                usuario.TokenExpira = DateTime.UtcNow.AddHours(1);
+                usuario.TokenExpira = DateTime.UtcNow.AddHours(2);
                 await context.SaveChangesAsync();
 
-                string urlRecuperacion = $"https://prestamo-recuperacion.netlify.app/cambiar.html?token={token}";
+                string urlRecuperacion = $"https://jolly-froyo-a0632f.netlify.app/cambiar.html?token={token}";
 
                 await EnviarEmailRecuperacionAsync(correo, urlRecuperacion);
 
